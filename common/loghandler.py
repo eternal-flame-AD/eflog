@@ -3,13 +3,16 @@ import colorama
 
 colorama.init(autoreset=True)
 
+def _add_zero(s,rlen):
+    return "0"*(rlen-len(s))+s
+
 def formattime(s):
     yr=str(s.tm_year)
-    mon=str(s.tm_mon)
-    day=str(s.tm_mday)
-    hr=str(s.tm_hour)
-    minute=str(s.tm_min)
-    sec=str(s.tm_sec)
+    mon=_add_zero(str(s.tm_mon),2)
+    day=_add_zero(str(s.tm_mday),2)
+    hr=_add_zero(str(s.tm_hour),2)
+    minute=_add_zero(str(s.tm_min),2)
+    sec=_add_zero(str(s.tm_sec),2)
     date="/".join((yr,mon,day))
     time=":".join((hr,minute,sec))
     return date,time
@@ -50,6 +53,7 @@ def printlog(string,severity):
 
 def writelog(f,string):
     f.write(string)
+    f.write("\n")
 
 class logitem():
     '''
