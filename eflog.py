@@ -6,7 +6,9 @@ except ImportError:
     deal with python 2.7
     '''
     import os
-    common_dir = os.path.abspath(__file__) + "/common/"
+    here = sys.argv[0]
+    here = os.path.abspath(here)
+    common_dir = here + "/common/"
     sys.path.insert(0, common_dir)
     import loghandler
 
