@@ -1,5 +1,5 @@
 import sys
-from common import loghandler
+import common.loghandler as loghandler
 
 
 class logger():
