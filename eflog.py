@@ -7,7 +7,7 @@ except ImportError:
     '''
     import os
     common_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    sys.path.insert(0, common_dir + "/common/")
+    sys.path.insert(0, common_dir + "/common")
     import loghandler
 
 
