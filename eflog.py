@@ -1,16 +1,5 @@
 import sys
-try:
-    import common.loghandler as loghandler
-except ImportError:
-    '''
-    deal with python 2.7
-    '''
-    import os
-    here = sys.argv[0]
-    here = os.path.abspath(here)
-    common_dir = here + "/common/"
-    sys.path.insert(0, common_dir)
-    import loghandler
+from common import loghandler
 
 
 class logger():
