@@ -32,7 +32,7 @@ def __severity_to_int(a):
         return 0
 
 
-def __severity_ge(a, b):
+def severity_gt(a, b):
     '''
     true if a>b
     fatal
@@ -40,7 +40,7 @@ def __severity_ge(a, b):
     warning
     info
     '''
-    return __severity_to_int(a) >= __severity_to_int(b)
+    return __severity_to_int(a) > __severity_to_int(b)
 
 
 def printlog(string, severity):
