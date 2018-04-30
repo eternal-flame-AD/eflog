@@ -9,15 +9,9 @@ def _add_zero(s, rlen):
 
 
 def formattime(s):
-    yr = str(s.tm_year)
-    mon = _add_zero(str(s.tm_mon), 2)
-    day = _add_zero(str(s.tm_mday), 2)
-    hr = _add_zero(str(s.tm_hour), 2)
-    minute = _add_zero(str(s.tm_min), 2)
-    sec = _add_zero(str(s.tm_sec), 2)
-    date = "/".join((yr, mon, day))
-    time = ":".join((hr, minute, sec))
-    return date, time
+    _date = time.strftime("%d %b %Y", s)
+    _time = time.strftime("%H:%M:%S", s)
+    return _date, _time
 
 
 def __severity_to_color(a):
