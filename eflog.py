@@ -2,6 +2,13 @@ from common import loghandler
 
 
 class logger():
+    ''' a logger class handles a log system which write logitems to stdout and/or
+        a file
+        stdout (bool): whether to write log to stdout
+        writer (StreamWriter): file writer (None for no file output)
+        showdate (bool): if you dont want to output date in the time field
+        minseverity (str): minimium log severity level to be written
+    '''
     def __init__(self, stdout=True, writer=None, showdate=False,
                  minseverity="INFO"):
         self.stdout = stdout
