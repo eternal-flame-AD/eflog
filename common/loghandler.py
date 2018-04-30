@@ -4,10 +4,6 @@ import colorama
 colorama.init(autoreset=True)
 
 
-def _add_zero(s, rlen):
-    return "0"*(rlen-len(s))+s
-
-
 def formattime(s):
     _date = time.strftime("%d %b %Y", s)
     _time = time.strftime("%H:%M:%S", s)

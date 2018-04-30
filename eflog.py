@@ -1,4 +1,3 @@
-import sys
 from common import loghandler
 
 
